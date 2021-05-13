@@ -2,19 +2,19 @@
 
 ## Authors
 
-    [Wanja Mascarenhas](https://github.com/mascarenhaswanja)
-    student ID: 101280022
+[Wanja Mascarenhas](https://github.com/mascarenhaswanja)
+student ID: 101280022
     
-    [Muzammil](https://github.com/muzz56)
-    student ID: 101281406 
+[Muzammil](https://github.com/muzz56)
+student ID: 101281406 
 
-## Project Description
+## :books: Project Description
 
     iOS application for the Parking App
     
-## Funcionalities
+## :gear: Funcionalities
 
-### User Profile
+### :woman_office_worker: :man_office_worker: User Profile
 
     - Sign-up
     - Sign-in
@@ -29,7 +29,7 @@
     - Contact number 
     - Car plate number 
        
-### Add Parlking
+### :car: Add Parlking
 
     - Create a new parking
 
@@ -42,9 +42,8 @@
     - Parking location (street address, latitude and longitude)
     - Date and time of parking 
 
-### View Parlking
+### :parking: View Parlking
 
     - View the list of all the parking the user made
-    
     
 
