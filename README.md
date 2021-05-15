@@ -29,7 +29,7 @@ student ID: 101281406
     - Contact number 
     - Car plate number 
        
-### :car: Add Parlking
+### :car: Add Parking
 
     - Create a new parking
 
@@ -42,7 +42,7 @@ student ID: 101281406
     - Parking location (street address, latitude and longitude)
     - Date and time of parking 
 
-### :parking: View Parlking
+### :parking: View Parking
 
     - View the list of all the parking the user made
     
