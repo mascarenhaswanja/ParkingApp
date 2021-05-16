@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         imageLogo?.image = UIImage(named:"logo")
+        
 //        password?.isSecureTextEntry = true
     }
 
