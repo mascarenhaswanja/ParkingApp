@@ -46,6 +46,22 @@ student ID: 101281406
 
     - View the list of all the parking the user made
 
+## :woman_student: :man_student: Students tasks
+
+``` sh
+
+    For this project we choose Cloud Firestore Firebase as Database solution
+
+    - By Muzammil
+        - Sign
+        - Signup
+        - Update/Delete Profile
+
+    - By Wanja:     
+        - Add Parking
+        - History Parking
+```
+
 #### Screenshots
 
     - Sign In
