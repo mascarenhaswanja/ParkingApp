@@ -48,7 +48,6 @@ student ID: 101281406
 
 #### Screenshots
 
-    - Sign In
-    <img width="1427" alt="Sign In" src="https://user-images.githubusercontent.com/43407375/118387677-b5fc0080-b5ed-11eb-93b0-cfe1ad2920d2.png">
+<img width="1427" alt="Sign In" src="https://user-images.githubusercontent.com/43407375/118387692-cf04b180-b5ed-11eb-9100-c083df6ae88f.png">
 
 
