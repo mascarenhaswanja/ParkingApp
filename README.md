@@ -1,3 +1,4 @@
+<img width="1427" alt="Sign In" src="https://user-images.githubusercontent.com/43407375/118387380-39b4ed80-b5ec-11eb-9477-d7747b133c5c.png">
 # ParkingApp - iOS
 
 ## Authors
