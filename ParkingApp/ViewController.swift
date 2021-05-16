@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class ViewController: UIViewController {
     
     // Varialbles
     let defaults = UserDefaults.standard
+    
+    // reference to the firestore database
+    let db = Firestore.firestore()
 
     // MARK: OUTLETS
     @IBOutlet weak var imageLogo: UIImageView!
@@ -25,6 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         imageLogo?.image = UIImage(named:"logo")
+        
 //        password?.isSecureTextEntry = true
     }
 
