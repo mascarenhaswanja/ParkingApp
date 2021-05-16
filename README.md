@@ -45,8 +45,10 @@ student ID: 101281406
 ### :parking: View Parking
 
     - View the list of all the parking the user made
-### Screenshots
+
+#### Screenshots
 
     - Sign In
-    <img width="1427" alt="Sign In" src="https://user-images.githubusercontent.com/43407375/118387380-39b4ed80-b5ec-11eb-9477-d7747b133c5c.png">
+    <img width="1427" alt="Sign In" src="https://user-images.githubusercontent.com/43407375/118387677-b5fc0080-b5ed-11eb-93b0-cfe1ad2920d2.png">
+
 
