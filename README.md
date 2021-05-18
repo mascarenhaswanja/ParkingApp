@@ -61,4 +61,20 @@ student ID: 101281406
         - Add Parking
         - History Parking
 ```
+---
+
+### 🖼️ Screenshots
+
+#### Sign In
+
+![](./screenshots/SignIn.png)
+
+---
+
+#### Sign Up
+
+![](./screenshots/SignUp.png)
+
+---
+
 
