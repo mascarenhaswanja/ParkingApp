@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var tfCNumber: UITextField!
     @IBOutlet weak var tfplateNumber: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
-    
+    @IBOutlet weak var tfConfirmPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
