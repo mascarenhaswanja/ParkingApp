@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Parking App wants to access your location to provide optimized experience.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Parking App wants to access your location to provide optimized experience.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
