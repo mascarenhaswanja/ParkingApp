@@ -19,6 +19,7 @@ class HistoryParkViewController: UIViewController {
     let parkingController = ParkingController()
     var row : Int = 0
     var listParking = [Park]()
+    var selectedParking:Park?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,17 +90,10 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedParking = listParking[indexPath.row]
+    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "detailPark",
-//           let destination = segue.destination as? DetailParkViewController,
-//           let index = tableView.indexPathForSelectedRow?.row {
-//            print(#function,"row \(self.row)")
-//            let vc = segue.destination as! DetailParkViewController
-//            let selectedParking = self.listParking[index]
-//            destination.selectedParking = selectedParking
-//        }
-//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailPark"{
               print(#function,"row \(self.row)")

@@ -143,7 +143,7 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
             do {
                 try db.collection("parking").addDocument(from: parking)
                 print(#function, "Parking added to Firestore")
-                showParkingAdd(title: "Parking Add", message: "Your parking successfully booked")
+                showParkingAdd(title: "Parking Add", message: "Successfully booked")
             }catch {
                 print(error)
             }
