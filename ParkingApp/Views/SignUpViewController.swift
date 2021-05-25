@@ -58,6 +58,12 @@ class SignUpViewController: UIViewController {
                    self.showFailedAlert()
                    return
                }
+        
+               // Email validation
+               if ( !email.contains("@") || !email.contains(".")) {
+                    print(#function, "please enter a valid email.")
+                self.showEmailAlert()
+               }
 
                
                //confirm if passwords are matched
@@ -66,6 +72,13 @@ class SignUpViewController: UIViewController {
                    self.showPasswordAlert()
                    return
                }
+        
+               if (  plateNumber.count < 2 || plateNumber.count  > 8 ){
+                    print("Please enter valid Car Plate Number")
+                self.showCarPlateAlert()
+               }
+                
+        
                // 2. add it to firebase
                let user = [
                    "First Name":firstName,
@@ -77,32 +90,64 @@ class SignUpViewController: UIViewController {
                    "Car Plate Number":plateNumber
                 
                ]
-               
-        db.collection("users").addDocument(data: user) { (error) in
-                   if let err = error {
-                       print("Error when saving document")
-                       print(err)
-                       return
-                   }
-                   else {
-                       print("document saved successfully")
-                    
-                       self.showSuccessAlert()
-                    
-                       self.tfName.text = ""
-                       self.tfLName.text = ""
-                       self.tfEmail.text = ""
-                       self.tfPassword.text = ""
-                       self.tfConfirmPassword.text = ""
-                       self.tfCNumber.text = ""
-                       self.tfplateNumber.text = ""
-                    
-                   }
-               }
+                db.collection("users").getDocuments {
+                    (queryResults, error) in
+                    if let err = error {
+                        print("Error getting documents from Users collection")
+                        print(err)
+                        return
+                    }
+                    else {
+                        // we were successful in getting the documents
+                        if (queryResults!.count == 0) {
+                            print("No users found")
+                        }
+                        else {
+                            // we found some results, so let's output it to the screen
+                            for result in queryResults!.documents {
+                                print(result.documentID)
+                                // output the contents of that documents
+                                let row = result.data()
+                                if (row["email"] as? String) == email {
+                                    print("User Found")
+                                    
+                                    self.userExistAlert()
+                                    break
+                                }
+                                else {
+                                    print("User doesn't exist")
+                                    self.db.collection("users").addDocument(data: user as [String : Any]) { (error) in
+                                        if let err = error {
+                                            print("Error when saving document")
+                                            print(err)
+                                            return
+                                        }
+                                        else {
+                                            print("document saved successfully")
+                                         
+                                            self.showSuccessAlert()
+                                         
+                                            self.tfName.text = ""
+                                            self.tfLName.text = ""
+                                            self.tfEmail.text = ""
+                                            self.tfPassword.text = ""
+                                            self.tfConfirmPassword.text = ""
+                                            self.tfCNumber.text = ""
+                                            self.tfplateNumber.text = ""
+                                         
+                                        }
+                                    }
+                                    
+                                }
+                                break
+                            }
+                        }
+                        
+                    }
+                }
 
         }
    
-    
     func showFailedAlert() {
         let alert = UIAlertController(title: "Alert", message: "Please enter the required fields", preferredStyle: UIAlertController.Style.alert)
         
@@ -113,7 +158,10 @@ class SignUpViewController: UIViewController {
     func showSuccessAlert() {
         let alert = UIAlertController(title: "Sign Up Successful", message: "Your account  has been created successfully", preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {_ in
+            
+            self.navigationController?.popViewController(animated: true)
+                                   }))
         self.present(alert, animated: true)
     }
     
@@ -124,6 +172,33 @@ class SignUpViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    func showEmailAlert() {
+            let alert = UIAlertController(title: "Sign Up Unsuccessful", message: "Please enter a valid email address.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+    }
+    
+    func showCarPlateAlert() {
+            let alert = UIAlertController(title: "Sign Up Unsuccessful", message: "Please enter a valid car plate number of length >= 2 and <= 8.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            print(#function, "please enter a valid car plate number")
+            return
+    }
+    
+    func userExistAlert() {
+            let alert = UIAlertController(title: "Sign Up Unsuccessful", message: "Account already exists. Please enter a valid email address.", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+    }
     
 
 }
