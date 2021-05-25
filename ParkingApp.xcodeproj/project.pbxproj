@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11FAD33326540853001CB391 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAD33226540853001CB391 /* SignUpViewController.swift */; };
 		431B3F5D26507027004F0DBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 431B3F5C26507027004F0DBE /* GoogleService-Info.plist */; };
 		43998DEC2659AC5200512AA2 /* HistoryParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43998DEB2659AC5200512AA2 /* HistoryParkViewController.swift */; };
 		43998DEE2659B03200512AA2 /* DetailParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43998DED2659B03200512AA2 /* DetailParkViewController.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11FAD33226540853001CB391 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1B949448E5175AABA5D5E62F /* Pods-ParkingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingApp.debug.xcconfig"; path = "Target Support Files/Pods-ParkingApp/Pods-ParkingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2A24A5AC87D7905C9B7D17B7 /* Pods_ParkingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B3F5C26507027004F0DBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -159,6 +157,7 @@
 				43B9CA79264CC14100BFDB14 /* AppDelegate.swift */,
 				43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */,
 				43B9CA87264CC14200BFDB14 /* LaunchScreen.storyboard */,
+				43B9CA7D264CC14100BFDB14 /* ViewController.swift */,
 				43B9CA85264CC14200BFDB14 /* Assets.xcassets */,
 				43B9CA82264CC14100BFDB14 /* ParkingApp.xcdatamodeld */,
 				43B9CA8A264CC14200BFDB14 /* Info.plist */,
@@ -198,6 +197,7 @@
 				B8F244DC330039CC4E0B6D19 /* Pods-ParkingAppTests.debug.xcconfig */,
 				B181F0C058A6D45798337DAE /* Pods-ParkingAppTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -639,7 +639,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ParkingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +658,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ParkingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
