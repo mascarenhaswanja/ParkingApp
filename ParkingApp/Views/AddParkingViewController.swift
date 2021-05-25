@@ -213,7 +213,7 @@ extension AddParkingViewController : CLLocationManagerDelegate{
                 }
             }
             else{
-                //  WOM  insert Latitude and Longitude
+                //  WOM   Latitude and Longitude - convert to address
                 print(#function,"Insert lat lon")
                // insertParking(lat: self.lat, lng: self.lng)//  If insert latitude and longitude
             }

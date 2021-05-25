@@ -17,14 +17,14 @@ class HistoryParkViewController: UIViewController {
     let db = Firestore.firestore()
     
     let parkingController = ParkingController()
-    var row = 0
+    var row : Int = 0
     var listParking = [Park]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableParkingView.delegate = self
         self.tableParkingView.dataSource = self
-        self.tableParkingView.rowHeight = 200
+        self.tableParkingView.rowHeight = 150
         
         self.fetchParking()  // WOM Select .where(user)
         
@@ -35,14 +35,6 @@ class HistoryParkViewController: UIViewController {
 //        let email = UserDefaults.standard.value(forKey: "email") as! String
     }
     
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//            // Before fetch the data clear the existing data
-//            self.listParking.removeAll()
-//
-//            // Fetch data
-//            self.fetchParking()
-//    }
     
     //  WOM - Move to ParkingController
     func fetchParking() {
@@ -87,28 +79,20 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableParkingView.dequeueReusableCell(withIdentifier: "parkCell") as? HistoryParkTableViewCell
 
         if cell != nil {
-            
-            cell?.lbladdress.text = listParking[indexPath.row].parkingLocation
-            cell?.lblHours.text = "Park " + String(listParking[indexPath.row].numberHours ) + " hours"
-            cell?.lblCarPlate.text = "Car Plate Number : " + listParking[indexPath.row].carPlate
+            cell?.lblCarPlate.text = "Car Plate Number : \(listParking[indexPath.row].carPlate)"
+            cell?.lbladdress.text = "\(listParking[indexPath.row].parkingLocation)"
             let formatter = DateFormatter()
             formatter.dateFormat = "MMM d y, HH:mm E"
-            cell?.lblDate.text = formatter.string(from: listParking[indexPath.row].dateTime)
+            cell?.lblDate.text = "\(formatter.string(from: listParking[indexPath.row].dateTime))"
+            cell?.lblHours.text = "Parking for \(String(listParking[indexPath.row].numberHours)) hours"
         }
-        
         return cell!
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        row = indexPath.section
-        tableParkingView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "detailPark", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailPark"
-        {
-            let selectedParking = self.listParking[row]
+        if segue.identifier == "detailPark"{
+            print(#function,"row \(self.row)")
+            let selectedParking = self.listParking[self.row]
             let vc = segue.destination as! DetailParkViewController
             vc.selectedParking = selectedParking
         }
