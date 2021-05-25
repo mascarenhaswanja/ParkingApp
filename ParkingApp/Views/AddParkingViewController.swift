@@ -61,7 +61,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         default:
             selHours = 1
         }
-        print(#function,"Hours \(selHours) row: \(hours[item])")
         return hours[item]
     }
 
