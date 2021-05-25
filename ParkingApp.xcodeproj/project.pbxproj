@@ -15,7 +15,6 @@
 		43A3333E265B548F006A0378 /* ParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3333D265B548F006A0378 /* ParkingController.swift */; };
 		43B9CA7A264CC14100BFDB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA79264CC14100BFDB14 /* AppDelegate.swift */; };
 		43B9CA7C264CC14100BFDB14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */; };
-		43B9CA7E264CC14100BFDB14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA7D264CC14100BFDB14 /* ViewController.swift */; };
 		43B9CA81264CC14100BFDB14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B9CA7F264CC14100BFDB14 /* Main.storyboard */; };
 		43B9CA84264CC14100BFDB14 /* ParkingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA82264CC14100BFDB14 /* ParkingApp.xcdatamodeld */; };
 		43B9CA86264CC14200BFDB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B9CA85264CC14200BFDB14 /* Assets.xcassets */; };
@@ -59,7 +58,6 @@
 		43B9CA76264CC14100BFDB14 /* ParkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B9CA79264CC14100BFDB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		43B9CA7D264CC14100BFDB14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		43B9CA80264CC14100BFDB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B9CA83264CC14100BFDB14 /* ParkingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParkingApp.xcdatamodel; sourceTree = "<group>"; };
 		43B9CA85264CC14200BFDB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				43F1C02D26599DCE0004B7B3 /* AddParkingViewController.swift */,
-				43B9CA7D264CC14100BFDB14 /* ViewController.swift */,
 				11FAD33226540853001CB391 /* SignUpViewController.swift */,
 				43998DEB2659AC5200512AA2 /* HistoryParkViewController.swift */,
 				43998DED2659B03200512AA2 /* DetailParkViewController.swift */,
@@ -456,7 +453,6 @@
 				43B9CA84264CC14100BFDB14 /* ParkingApp.xcdatamodeld in Sources */,
 				43998DEE2659B03200512AA2 /* DetailParkViewController.swift in Sources */,
 				43F1C02E26599DCE0004B7B3 /* AddParkingViewController.swift in Sources */,
-				43B9CA7E264CC14100BFDB14 /* ViewController.swift in Sources */,
 				43B9CA7A264CC14100BFDB14 /* AppDelegate.swift in Sources */,
 				43E3FCD3265BF650008B6A4A /* MapParkViewController.swift in Sources */,
 				43998DEC2659AC5200512AA2 /* HistoryParkViewController.swift in Sources */,

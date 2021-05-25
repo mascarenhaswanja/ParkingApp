@@ -34,8 +34,6 @@ class DetailParkViewController: UIViewController {
         lblHours.text = "Parking \(String(currentParking.numberHours)) hours"
         lblBuildingCode.text = "Building: \(currentParking.buildindCode)"
         lblSlot.text = "Slot: \(currentParking.suitHost)"
-        
-        // navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
