@@ -61,7 +61,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         default:
             selHours = 1
         }
-        print(#function,"Hours \(selHours) row: \(hours[item])")
         return hours[item]
     }
 
@@ -107,9 +106,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func insertParking(lat:Double, lng:Double){
       isCurrentLocation = false
-
-//        let email = UserDefaults.standard.value(forKey: "email") as! String
-//        let currentUser = self.userController.searchProfile(email: email)
         
         let currentUser = "jack@gmail.com"
 

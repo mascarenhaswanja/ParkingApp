@@ -13,7 +13,6 @@ class HistoryParkViewController: UIViewController {
     @IBOutlet weak var tableParkingView: UITableView!
     
     // Variables
-    // WOM
     let db = Firestore.firestore()
     
     let parkingController = ParkingController()
@@ -24,27 +23,11 @@ class HistoryParkViewController: UIViewController {
         super.viewDidLoad()
         self.tableParkingView.delegate = self
         self.tableParkingView.dataSource = self
-        self.tableParkingView.rowHeight = 200
+        self.tableParkingView.rowHeight = 150
         
         self.fetchParking()  // WOM Select .where(user)
         
-//        if self.listParking.count <= 0 {
-//            print(#function, "You don't have any booked Parking." )
-//        }
-        
-//        let email = UserDefaults.standard.value(forKey: "email") as! String
     }
-    
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//            // Before fetch the data clear the existing data
-//            self.listParking.removeAll()
-//
-//            // Fetch data
-//            self.fetchParking()
-//    }
-    
-    //  WOM - Move to ParkingController
     func fetchParking() {
         db.collection("parking").order(by: "dateTime", descending: true).getDocuments {
             (queryResults, error) in
@@ -87,7 +70,6 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableParkingView.dequeueReusableCell(withIdentifier: "parkCell") as? HistoryParkTableViewCell
 
         if cell != nil {
-            
             cell?.lbladdress.text = listParking[indexPath.row].parkingLocation
             cell?.lblHours.text = "Park " + String(listParking[indexPath.row].numberHours ) + " hours"
             cell?.lblCarPlate.text = "Car Plate Number : " + listParking[indexPath.row].carPlate
@@ -97,12 +79,6 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         }
         
         return cell!
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        row = indexPath.section
-        tableParkingView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "detailPark", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
