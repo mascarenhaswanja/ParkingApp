@@ -16,10 +16,10 @@
 		4349DD90265DCD8000E9E288 /* MapParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349DD8F265DCD8000E9E288 /* MapParkViewController.swift */; };
 		4349DD94265DCEB400E9E288 /* ParkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349DD93265DCEB400E9E288 /* ParkingController.swift */; };
 		4349DD96265DCEE700E9E288 /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349DD95265DCEE700E9E288 /* Park.swift */; };
+		436C05D4265DD3E90085C283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 436C05D3265DD3E90085C283 /* Main.storyboard */; };
 		43B9CA7A264CC14100BFDB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA79264CC14100BFDB14 /* AppDelegate.swift */; };
 		43B9CA7C264CC14100BFDB14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */; };
 		43B9CA7E264CC14100BFDB14 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA7D264CC14100BFDB14 /* SignInViewController.swift */; };
-		43B9CA81264CC14100BFDB14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B9CA7F264CC14100BFDB14 /* Main.storyboard */; };
 		43B9CA84264CC14100BFDB14 /* ParkingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43B9CA82264CC14100BFDB14 /* ParkingApp.xcdatamodeld */; };
 		43B9CA86264CC14200BFDB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B9CA85264CC14200BFDB14 /* Assets.xcassets */; };
 		43B9CA89264CC14200BFDB14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B9CA87264CC14200BFDB14 /* LaunchScreen.storyboard */; };
@@ -59,11 +59,11 @@
 		4349DD8F265DCD8000E9E288 /* MapParkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapParkViewController.swift; sourceTree = "<group>"; };
 		4349DD93265DCEB400E9E288 /* ParkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingController.swift; sourceTree = "<group>"; };
 		4349DD95265DCEE700E9E288 /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		436C05D3265DD3E90085C283 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		43B9CA76264CC14100BFDB14 /* ParkingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B9CA79264CC14100BFDB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		43B9CA7D264CC14100BFDB14 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		43B9CA80264CC14100BFDB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B9CA83264CC14100BFDB14 /* ParkingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParkingApp.xcdatamodel; sourceTree = "<group>"; };
 		43B9CA85264CC14200BFDB14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B9CA88264CC14200BFDB14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				431B3F5C26507027004F0DBE /* GoogleService-Info.plist */,
 				43B9CA79264CC14100BFDB14 /* AppDelegate.swift */,
 				43B9CA7B264CC14100BFDB14 /* SceneDelegate.swift */,
-				43B9CA7F264CC14100BFDB14 /* Main.storyboard */,
+				436C05D3265DD3E90085C283 /* Main.storyboard */,
 				43B9CA87264CC14200BFDB14 /* LaunchScreen.storyboard */,
 				43B9CA85264CC14200BFDB14 /* Assets.xcassets */,
 				43B9CA82264CC14100BFDB14 /* ParkingApp.xcdatamodeld */,
@@ -323,9 +323,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B9CA89264CC14200BFDB14 /* LaunchScreen.storyboard in Resources */,
+				436C05D4265DD3E90085C283 /* Main.storyboard in Resources */,
 				431B3F5D26507027004F0DBE /* GoogleService-Info.plist in Resources */,
 				43B9CA86264CC14200BFDB14 /* Assets.xcassets in Resources */,
-				43B9CA81264CC14100BFDB14 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43B9CA7F264CC14100BFDB14 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43B9CA80264CC14100BFDB14 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43B9CA87264CC14200BFDB14 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
