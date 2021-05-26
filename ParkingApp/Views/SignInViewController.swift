@@ -91,7 +91,7 @@ class SignInViewController: UIViewController {
     }
     
     func goToAddParking() {
-      guard let listParking = storyboard?.instantiateViewController(identifier: "addParking") as? AddParkingViewController else {
+      guard let listParking = storyboard?.instantiateViewController(identifier: "tab")  else {
        //guard let listParking = storyboard?.instantiateViewController(identifier: "tab") as? UITabBarController else {
                 print("Cannot find Parking List!")
                 return

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUC-ph-NED">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUC-ph-NED">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login_page" id="BYZ-38-t0r" customClass="SignInViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,7 +351,7 @@
             </objects>
             <point key="canvasLocation" x="3791" y="790"/>
         </scene>
-        <!--Add Parking-->
+        <!--Add Parking View Controller-->
         <scene sceneID="aAV-HG-XEv">
             <objects>
                 <viewController storyboardIdentifier="addParking" id="YCG-BK-N2R" customClass="AddParkingViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -457,7 +457,7 @@
                         <viewLayoutGuide key="safeArea" id="ay7-j3-fpf"/>
                         <color key="backgroundColor" red="0.97930090209999998" green="0.86157597730000002" blue="0.57399051649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Parking" id="Qc8-Ll-oUN"/>
+                    <navigationItem key="navigationItem" id="Qc8-Ll-oUN"/>
                     <connections>
                         <outlet property="btnCurrentLocation" destination="IE8-fP-se5" id="nbG-UD-CN0"/>
                         <outlet property="hoursPicker" destination="nRU-6n-gwx" id="cJi-Hv-J3X"/>
@@ -492,7 +492,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parkCell" rowHeight="175" id="vdC-x9-oNG" customClass="HistoryParkTableViewCell" customModule="ParkingApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="175"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdC-x9-oNG" id="sDA-Lz-TjW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="175"/>
@@ -554,18 +554,160 @@
         <!--Update Profile-->
         <scene sceneID="bgR-EG-Gsl">
             <objects>
-                <viewController id="BwX-fZ-P1G" customClass="ViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BwX-fZ-P1G" customClass="EditViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xSj-f5-jQ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egg-cA-4BQ">
+                                <rect key="frame" x="50" y="217" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b61-bh-UbW">
+                                <rect key="frame" x="50" y="276" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnR-z0-9ta">
+                                <rect key="frame" x="50" y="335" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wir-uP-JI3">
+                                <rect key="frame" x="50" y="394" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-wS-9jN">
+                                <rect key="frame" x="50" y="453" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFZ-aU-5Vn">
+                                <rect key="frame" x="50" y="158" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Car Plate Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-y0-CJH">
+                                <rect key="frame" x="50" y="512" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-w7-tXg">
+                                <rect key="frame" x="100" y="635" width="214" height="39"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Delete Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUp:" destination="ugx-d9-smp" eventType="touchUpInside" id="exJ-LC-63q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edS-uO-jYP">
+                                <rect key="frame" x="100" y="571" width="214" height="39"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="OTp-zN-5f1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Update Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signUp:" destination="ugx-d9-smp" eventType="touchUpInside" id="yuc-qc-AFx"/>
+                                    <action selector="updateAccountPressed:" destination="BwX-fZ-P1G" eventType="touchUpInside" id="PL3-8k-6cE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sSY-CI-FSJ"/>
                         <color key="backgroundColor" red="0.97930090209999998" green="0.86157597730000002" blue="0.57399051649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="bottom" secondItem="hrt-w7-tXg" secondAttribute="bottom" constant="30" id="18c-b9-B6H"/>
+                            <constraint firstItem="hrt-w7-tXg" firstAttribute="top" secondItem="edS-uO-jYP" secondAttribute="bottom" constant="25" id="1DV-a2-2yL"/>
+                            <constraint firstItem="RFZ-aU-5Vn" firstAttribute="top" secondItem="sSY-CI-FSJ" secondAttribute="top" constant="50" id="8Wc-8I-q3v"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="BnR-z0-9ta" secondAttribute="trailing" constant="50" id="92n-NW-SoC"/>
+                            <constraint firstItem="b61-bh-UbW" firstAttribute="top" secondItem="egg-cA-4BQ" secondAttribute="bottom" constant="25" id="9XT-78-WOY"/>
+                            <constraint firstItem="BnR-z0-9ta" firstAttribute="top" secondItem="b61-bh-UbW" secondAttribute="bottom" constant="25" id="Cq9-nx-sPq"/>
+                            <constraint firstItem="Wir-uP-JI3" firstAttribute="top" secondItem="BnR-z0-9ta" secondAttribute="bottom" constant="25" id="EuP-3q-CA5"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="Wir-uP-JI3" secondAttribute="trailing" constant="50" id="MWq-Pz-R18"/>
+                            <constraint firstItem="edS-uO-jYP" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="100" id="OC7-jG-Tah"/>
+                            <constraint firstItem="EiS-y0-CJH" firstAttribute="top" secondItem="EqM-wS-9jN" secondAttribute="bottom" constant="25" id="Pea-x8-LL3"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="RFZ-aU-5Vn" secondAttribute="trailing" constant="50" id="RQJ-b0-QoM"/>
+                            <constraint firstItem="egg-cA-4BQ" firstAttribute="top" secondItem="RFZ-aU-5Vn" secondAttribute="bottom" constant="25" id="Ueo-tL-GBq"/>
+                            <constraint firstItem="egg-cA-4BQ" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="Uk3-b6-kap"/>
+                            <constraint firstItem="EqM-wS-9jN" firstAttribute="top" secondItem="Wir-uP-JI3" secondAttribute="bottom" constant="25" id="Y8H-vf-AWS"/>
+                            <constraint firstItem="edS-uO-jYP" firstAttribute="top" secondItem="EiS-y0-CJH" secondAttribute="bottom" constant="25" id="aAf-l8-s5D"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="EqM-wS-9jN" secondAttribute="trailing" constant="50" id="d5M-Rh-MRV"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="hrt-w7-tXg" secondAttribute="trailing" constant="100" id="nFY-nS-kuT"/>
+                            <constraint firstItem="Wir-uP-JI3" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="naA-Q5-6yE"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="edS-uO-jYP" secondAttribute="trailing" constant="100" id="oJi-V3-sTy"/>
+                            <constraint firstItem="BnR-z0-9ta" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="qrY-6C-v7T"/>
+                            <constraint firstItem="EiS-y0-CJH" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="rdq-5t-ArM"/>
+                            <constraint firstItem="RFZ-aU-5Vn" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="soE-ik-z01"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="egg-cA-4BQ" secondAttribute="trailing" constant="50" id="tzC-9f-F2G"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="b61-bh-UbW" secondAttribute="trailing" constant="50" id="uyB-r1-cL1"/>
+                            <constraint firstItem="sSY-CI-FSJ" firstAttribute="trailing" secondItem="EiS-y0-CJH" secondAttribute="trailing" constant="50" id="wN5-h2-M1P"/>
+                            <constraint firstItem="b61-bh-UbW" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="yZD-dj-lzS"/>
+                            <constraint firstItem="hrt-w7-tXg" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="100" id="zXV-5e-Dnh"/>
+                            <constraint firstItem="EqM-wS-9jN" firstAttribute="leading" secondItem="sSY-CI-FSJ" secondAttribute="leading" constant="50" id="zdf-Iv-1sJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Update Profile" id="c8C-xG-i8D"/>
+                    <connections>
+                        <outlet property="tfCarPlateNumber" destination="EiS-y0-CJH" id="o1H-I4-33D"/>
+                        <outlet property="tfConfirmNewPassword" destination="Wir-uP-JI3" id="e3Q-G5-5ep"/>
+                        <outlet property="tfContact" destination="EqM-wS-9jN" id="H4P-nq-vo8"/>
+                        <outlet property="tfEmail" destination="b61-bh-UbW" id="WRH-Wc-imV"/>
+                        <outlet property="tfLName" destination="egg-cA-4BQ" id="KMN-v8-iWv"/>
+                        <outlet property="tfName" destination="RFZ-aU-5Vn" id="rTY-Es-LfN"/>
+                        <outlet property="tfNewPassword" destination="BnR-z0-9ta" id="A7o-b1-3CG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVd-Z6-t57" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790" y="1509"/>
+            <point key="canvasLocation" x="3789.8550724637685" y="1508.7053571428571"/>
         </scene>
         <!--Detail Park View Controller-->
         <scene sceneID="iYm-LZ-U7s">

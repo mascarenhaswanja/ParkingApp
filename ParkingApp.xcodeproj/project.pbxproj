@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11B0D701265DF62E00F6C171 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0D700265DF62E00F6C171 /* EditViewController.swift */; };
 		11FAD33326540853001CB391 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAD33226540853001CB391 /* SignUpViewController.swift */; };
 		431B3F5D26507027004F0DBE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 431B3F5C26507027004F0DBE /* GoogleService-Info.plist */; };
 		4349DD88265DCC8800E9E288 /* AddParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349DD87265DCC8800E9E288 /* AddParkingViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11B0D700265DF62E00F6C171 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		11FAD33226540853001CB391 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1B949448E5175AABA5D5E62F /* Pods-ParkingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingApp.debug.xcconfig"; path = "Target Support Files/Pods-ParkingApp/Pods-ParkingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2A24A5AC87D7905C9B7D17B7 /* Pods_ParkingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				4349DD8B265DCCF700E9E288 /* HistoryParkTableViewCell.swift */,
 				4349DD8D265DCD4400E9E288 /* HistoryParkViewController.swift */,
 				4349DD8F265DCD8000E9E288 /* MapParkViewController.swift */,
+				11B0D700265DF62E00F6C171 /* EditViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B0D701265DF62E00F6C171 /* EditViewController.swift in Sources */,
 				4349DD8E265DCD4400E9E288 /* HistoryParkViewController.swift in Sources */,
 				43B9CA84264CC14100BFDB14 /* ParkingApp.xcdatamodeld in Sources */,
 				4349DD88265DCC8800E9E288 /* AddParkingViewController.swift in Sources */,
