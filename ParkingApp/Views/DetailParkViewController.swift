@@ -31,23 +31,16 @@ class DetailParkViewController: UIViewController {
         lblAddress.text = "Address: \n \(currentParking.parkingLocation)"
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d y, HH:mm E"
-        lblDate.text = "Date - Hour: \(formatter.string(from: currentParking.dateTime))"
-        lblHours.text = "Hours \(String(currentParking.numberHours))"
+        lblDate.text = "Date: \(formatter.string(from: currentParking.dateTime))"
+        lblHours.text = "Park \(String(currentParking.numberHours)) hpurs"
         lblBuildingCode.text = "Building: \(currentParking.buildindCode)"
         lblSlot.text = "Slot: \(currentParking.suitHost)"
-        
-        // navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mapPark"
         {
-            print("Parking Data latitude \(selectedParking!.parkingLocation)")
             let vc = segue.destination as! MapParkViewController
-            
-            //  WOM, Save Latitude and Longitude in a Park Table?
-//            vc.lat = selectedParking!.latitude
-//            vc.lng = selectedParking!.longitude
             vc.address = selectedParking!.parkingLocation
         }
         

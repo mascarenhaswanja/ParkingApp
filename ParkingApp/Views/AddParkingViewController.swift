@@ -143,19 +143,12 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
             }catch {
                 print(error)
             }
-        
-//        if parkinkAdd {
-//            parkingAddDialog(title: "\(currentUser?.first_name! ?? "")", message: "Parking successfully completed.")
-//        self.navigationController?.popViewController(animated: true)
-//        }
-        
-        
     }
     
     func showParkingAdd(title:String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let successAction = UIAlertAction(title: "Success", style: .default) { (action:UIAlertAction!) in
-            self.tabBarController!.selectedIndex = 0;
+            self.tabBarController?.selectedIndex = 0;
         }
         alert.addAction(successAction)
         self.present(alert, animated: true, completion: nil)
@@ -220,14 +213,12 @@ extension AddParkingViewController : CLLocationManagerDelegate{
          }
        }
      }
-    //methods for to get current location geoCoding
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         guard let myLocation : CLLocationCoordinate2D = manager.location?.coordinate
         else{ return }
-        
-//        print("\(myLocation.latitude)")
-//        print("\(myLocation.longitude)")
+
         
         self.getAddress(location: CLLocation(latitude: myLocation.latitude, longitude: myLocation.longitude))
 }
@@ -235,8 +226,6 @@ extension AddParkingViewController : CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
-    
-    //to find address from geocoding(lat n long)
     
     func getAddress(location : CLLocation){
         geocoder.reverseGeocodeLocation(location, completionHandler: {(placemark, error) in

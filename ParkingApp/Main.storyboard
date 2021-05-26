@@ -725,21 +725,21 @@
                                 <color key="highlightedColor" systemColor="linkColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblHours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyH-r1-NAw">
-                                <rect key="frame" x="57" y="409" width="118" height="24"/>
+                                <rect key="frame" x="57" y="409" width="299" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblCarPlate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-Ui-xh2">
-                                <rect key="frame" x="57" y="176" width="118" height="24"/>
+                                <rect key="frame" x="57" y="176" width="322" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblSlot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c2-0m-f7m">
-                                <rect key="frame" x="57" y="543" width="118" height="24"/>
+                                <rect key="frame" x="57" y="543" width="257" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -753,14 +753,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8im-p7-0wa">
-                                <rect key="frame" x="57" y="340" width="172" height="24"/>
+                                <rect key="frame" x="57" y="340" width="299" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblBuildingCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKc-Or-8w7">
-                                <rect key="frame" x="57" y="475" width="118" height="24"/>
+                                <rect key="frame" x="57" y="475" width="257" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -774,7 +774,7 @@
                                     <color key="titleColor" red="0.52588119440000003" green="0.0837988135" blue="0.013301747209999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O9U-iL-Rev" kind="showDetail" id="u5h-eR-4pK"/>
+                                    <segue destination="O9U-iL-Rev" kind="showDetail" identifier="map" id="u5h-eR-4pK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -798,23 +798,18 @@
         <!--Map Park View Controller-->
         <scene sceneID="mJb-X6-hm6">
             <objects>
-                <viewController id="O9U-iL-Rev" customClass="MapParkViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapPark" id="O9U-iL-Rev" customClass="MapParkViewController" customModule="ParkingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VsA-B8-pVf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-VT-9bx">
-                                <rect key="frame" x="58" y="166" width="298" height="575"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-VT-9bx">
+                                <rect key="frame" x="46" y="62" width="323" height="612"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Oa5-f8-aXF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Oa5-f8-aXF" firstAttribute="bottom" secondItem="f8Q-VT-9bx" secondAttribute="bottom" id="WER-ky-0ma"/>
-                            <constraint firstItem="Oa5-f8-aXF" firstAttribute="trailing" secondItem="f8Q-VT-9bx" secondAttribute="trailing" id="c9A-7I-VvM"/>
-                            <constraint firstItem="f8Q-VT-9bx" firstAttribute="top" secondItem="Oa5-f8-aXF" secondAttribute="top" id="lZ3-Bp-pwf"/>
-                            <constraint firstItem="f8Q-VT-9bx" firstAttribute="leading" secondItem="Oa5-f8-aXF" secondAttribute="leading" id="sKX-ap-DAl"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzx-g5-GuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
