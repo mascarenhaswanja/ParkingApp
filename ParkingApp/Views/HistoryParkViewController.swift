@@ -70,12 +70,12 @@ extension HistoryParkViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableParkingView.dequeueReusableCell(withIdentifier: "parkCell") as? HistoryParkTableViewCell
 
         if cell != nil {
-            cell?.lbladdress.text = listParking[indexPath.row].parkingLocation
-            cell?.lblHours.text = "Park " + String(listParking[indexPath.row].numberHours ) + " hours"
-            cell?.lblCarPlate.text = "Car Plate Number : " + listParking[indexPath.row].carPlate
+            cell?.lbladdress.text = "\(listParking[indexPath.row].parkingLocation)"
+            cell?.lblHours.text = "Park \(String(listParking[indexPath.row].numberHours)) hours"
+            cell?.lblCarPlate.text = "Car Plate Number : \(listParking[indexPath.row].carPlate)"
             let formatter = DateFormatter()
             formatter.dateFormat = "MMM d y, HH:mm E"
-            cell?.lblDate.text = formatter.string(from: listParking[indexPath.row].dateTime)
+            cell?.lblDate.text = "\(formatter.string(from: listParking[indexPath.row].dateTime))"
         }
         
         return cell!
