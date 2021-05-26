@@ -50,7 +50,10 @@ class SignInViewController: UIViewController {
         guard let unwrappedEmail = email.text, let unwrappedPassword = password.text else {
                 return
         }
-        db.collection("users").getDocuments {
+        db.collection("users")
+            .whereField("email", isEqualTo: unwrappedEmail)
+            .whereField("password", isEqualTo: unwrappedPassword)
+            .getDocuments(){
             (queryResults, error) in
             if let err = error {
                 print("Error getting documents from Users collection")
@@ -71,7 +74,7 @@ class SignInViewController: UIViewController {
                         if (row["email"] as? String) == unwrappedEmail && (row["password"] as? String) == unwrappedPassword{
                             print("User Found")
                             
-                            //self.goToAddParking()
+                            self.goToAddParking()
                             self.showSuccessAlert()
                             break
                         }
@@ -87,14 +90,15 @@ class SignInViewController: UIViewController {
         }
     }
     
-//    func goToAddParking() {
-//        guard let listParking = storyboard?.instantiateViewController(identifier: "addParking") as? AddParkingViewController else {
-//                print("Cannot find Parking List!")
-//                return
-//        }
-//        //listAtt.user = userAtu
-//        show(listParking, sender: self)
-//    }
+    func goToAddParking() {
+      guard let listParking = storyboard?.instantiateViewController(identifier: "addParking") as? AddParkingViewController else {
+       //guard let listParking = storyboard?.instantiateViewController(identifier: "tab") as? UITabBarController else {
+                print("Cannot find Parking List!")
+                return
+        }
+        //listAtt.user = userAtu
+        show(listParking, sender: self)
+    }
     
 }
     
